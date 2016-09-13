@@ -1,4 +1,4 @@
-package com.plusonetesting;
+package com.plusonetesting.TDDBE;
 
 public class Main {
 
