@@ -1,11 +1,11 @@
 package com.plusonetesting.TDDBE;
 
-class Money {
+class Money implements Expression{
 
-    protected int amount;
-    protected String currency;
+    private int amount;
+    private String currency;
 
-    Money(int amount, String currency) {
+    private Money(int amount, String currency) {
         this.amount = amount;
         this.currency = currency;
     }
@@ -35,4 +35,7 @@ class Money {
         return currency;
     }
 
+    Expression plus(Money addend) {
+        return new Money(amount + addend.amount, currency);
+    }
 }
