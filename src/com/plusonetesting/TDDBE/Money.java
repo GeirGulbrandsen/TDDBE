@@ -27,8 +27,6 @@ class Money {
 
     static Money franc(int amount) { return new Franc(amount, "CHF"); }
 
-    String currency() {
-        return currency;
-    }
+    String currency() { return currency; }
 
 }
