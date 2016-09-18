@@ -2,10 +2,10 @@ package com.plusonetesting.TDDBE;
 
 class Money implements Expression{
 
-    private int amount;
+    int amount;
     private String currency;
 
-    private Money(int amount, String currency) {
+    Money(int amount, String currency) {
         this.amount = amount;
         this.currency = currency;
     }
@@ -35,7 +35,11 @@ class Money implements Expression{
         return currency;
     }
 
+    public Money reduce(String to){
+        return this;
+    }
+
     Expression plus(Money addend) {
-        return new Money(amount + addend.amount, currency);
+        return new Sum(this, addend);
     }
 }
