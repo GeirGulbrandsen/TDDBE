@@ -1,8 +1,8 @@
 package com.plusonetesting.TDDBE;
 
-public class Franc extends Money{
+class Franc extends Money{
 
-    public Franc(int amount, String currency) {
+    Franc(int amount, String currency) {
         super(amount, currency);
     }
 

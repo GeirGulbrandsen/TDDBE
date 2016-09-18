@@ -1,8 +1,8 @@
 package com.plusonetesting.TDDBE;
 
-public class Dollar extends Money{
+class Dollar extends Money{
 
-    public Dollar(int amount, String currency) {
+    Dollar(int amount, String currency) {
         super(amount, currency);
     }
 
@@ -10,7 +10,7 @@ public class Dollar extends Money{
         return Money.dollar(amount * multiplier);
     }
 
-    public String currency() {
+    String currency() {
         return currency;
     }
 
