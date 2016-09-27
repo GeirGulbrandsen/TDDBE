@@ -25,6 +25,8 @@ public class MoneyTest {
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));
         assertFalse(Money.dollar(5).equals(Money.dollar(6)));
         assertFalse(Money.franc(5).equals(Money.dollar(5)));
+        assertFalse(Money.dollar(10).equals(10));
+        assertFalse(new Pair("CHF", "USD").equals(10));
     }
 
     @Test
@@ -80,7 +82,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testMixedaddition() {
+    public void testMixedAddition() {
         Expression fiveBucks = Money.dollar(5);
         Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();

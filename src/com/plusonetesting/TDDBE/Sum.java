@@ -1,8 +1,8 @@
 package com.plusonetesting.TDDBE;
 
 class Sum implements Expression{
-    Expression augend;
-    Expression addend;
+    final Expression augend;
+    final Expression addend;
 
     Sum(Expression augend, Expression addend) {
         this.augend = augend;

@@ -13,7 +13,7 @@ class Bank {
         return source.reduce(this, to);
     }
 
-    private Hashtable rates = new Hashtable();
+    private final Hashtable rates = new Hashtable();
 
     public void addRate(String from, String to, int rate) {
         rates.put(new Pair(from, to), rate);

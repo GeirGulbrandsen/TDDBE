@@ -2,8 +2,8 @@ package com.plusonetesting.TDDBE;
 
 class Money implements Expression{
 
-    int amount;
-    private String currency;
+    final int amount;
+    private final String currency;
 
     Money(int amount, String currency) {
         this.amount = amount;
@@ -19,6 +19,8 @@ class Money implements Expression{
 //    }
 
     public boolean equals(Object object) {
+        if (getClass() != object.getClass())
+                return false;
         Money money = (Money) object;
         return amount == money.amount
                 && currency().equals(money.currency());
