@@ -10,13 +10,13 @@ class Money implements Expression{
         this.currency = currency;
     }
 
-    Expression times(int multiplier) {
+    public Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
 
-    public String toString() {
-        return amount + " " + currency;
-    }
+//    public String toString() {
+//        return amount + " " + currency;
+//    }
 
     public boolean equals(Object object) {
         Money money = (Money) object;
