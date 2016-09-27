@@ -1,7 +1,5 @@
 package com.plusonetesting.TDDBE;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.MultiHashtable;
-
 import java.util.Hashtable;
 
 class Bank {
